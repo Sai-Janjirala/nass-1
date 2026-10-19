@@ -1,0 +1,4 @@
+travel_destination_explorer_next2/node_modules/
+travel_destination_explorer_next2/.next/
+*.log
+.DS_Store
