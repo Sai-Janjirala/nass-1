@@ -1,0 +1,6 @@
+import Link from "next/link";
+
+export default function OverviewPage() {
+  const steps = [["01", "Choose a region", "Start with the landscape, pace, and season that suit your trip."], ["02", "Compare destination notes", "Check typical trip lengths and local transit guidance before booking."], ["03", "Keep the plan flexible", "Leave open time for markets, weather, and unplanned discoveries."]];
+  return <main className="mx-auto w-full max-w-4xl px-5 py-12 sm:px-8"><p className="text-xs font-bold tracking-[0.18em] text-emerald-800">TRIP PLANNING NOTES</p><h1 className="mt-3 text-4xl font-bold text-slate-900">Build a trip with room to wander.</h1><p className="mt-4 max-w-2xl text-slate-600">Use the catalogue to shortlist destinations, compare seasons and transit notes, then give each place enough time to surprise you.</p><div className="mt-9 grid gap-4 sm:grid-cols-3">{steps.map(([number, title, copy]) => <section key={number} className="rounded-xl border border-slate-200 p-5"><p className="font-bold text-emerald-800">{number}</p><h2 className="mt-4 text-lg font-bold text-slate-900">{title}</h2><p className="mt-2 text-sm leading-6 text-slate-600">{copy}</p></section>)}</div><Link href="/" className="mt-9 inline-flex rounded-lg bg-emerald-800 px-5 py-3 font-bold text-white hover:bg-emerald-700">Browse destinations</Link></main>;
+}
